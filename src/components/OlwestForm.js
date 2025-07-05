@@ -45,8 +45,8 @@ function OlwestForm({ formData, setFormData, handleSubmit, isSubmitting, uploadP
           color="white"
           border="1px solid"
           borderColor="gray.500"
-          _hover={{ borderColor: '#7f9cf5' }}
-          _focus={{ borderColor: '#7f9cf5', boxShadow: '0 0 0 1px #7f9cf5' }}
+          _hover={{ borderColor: '#D2B48C' }}
+          _focus={{ borderColor: '#D2B48C', boxShadow: '0 0 0 1px #D2B48C' }}
           borderRadius="md"
           size="lg"
           autoComplete="off"
@@ -66,8 +66,8 @@ function OlwestForm({ formData, setFormData, handleSubmit, isSubmitting, uploadP
           color="white"
           border="1px solid"
           borderColor="gray.500"
-          _hover={{ borderColor: '#7f9cf5' }}
-          _focus={{ borderColor: '#7f9cf5', boxShadow: '0 0 0 1px #7f9cf5' }}
+          _hover={{ borderColor: '#D2B48C' }}
+          _focus={{ borderColor: '#D2B48C', boxShadow: '0 0 0 1px #D2B48C' }}
           borderRadius="md"
           size="lg"
           p={1}
