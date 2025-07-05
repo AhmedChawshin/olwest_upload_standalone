@@ -23,9 +23,6 @@
     "@testing-library/user-event": "^13.5.0",
     "typescript": "^5.8.3"
   },
-  "overrides": {
-    "ajv": "^8.17.1"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -56,5 +53,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "https://olwestupload.graalonline.com"
 }
