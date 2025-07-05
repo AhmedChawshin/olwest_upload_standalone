@@ -94,6 +94,8 @@ function OlwestForm({ formData, setFormData, handleSubmit, isSubmitting, uploadP
               transition="all 0.3s ease"
               leftIcon={<Image src={type.icon} boxSize="24px" />}
               height="70px"
+              width={{ base: '100%', md: 'auto' }} 
+
             >
               <VStack spacing={1} align="start">
                 <Text fontSize="sm" fontWeight="medium">{type.label}</Text>
