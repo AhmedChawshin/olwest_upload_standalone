@@ -29,13 +29,13 @@ const theme = extendTheme({
 
 function Layout({ children }) {
   return (
-    <ChakraProvider theme={theme}>
-      <TranslationProvider>
+    <TranslationProvider>
+      <ChakraProvider theme={theme}>
         <Header />
         {children}
         <Footer />
-      </TranslationProvider>
-    </ChakraProvider>
+      </ChakraProvider>
+    </TranslationProvider>
   );
 }
 

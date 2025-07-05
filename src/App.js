@@ -7,6 +7,7 @@ import './App.css';
 
 function App() {
   const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     email: '',
     file: null,
@@ -142,7 +143,7 @@ function App() {
         mb={6}
         transition="text-shadow 0.3s ease-in-out"
       >
-        GraalOnline Ol'West Upload
+        GraalOnline Ol'West Upload {t('upload.email')}
       </Heading>
       <Box mt={8}>
         <OlwestForm

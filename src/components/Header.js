@@ -4,35 +4,37 @@ import { useState, useEffect } from 'react';
 
 function Header() {
   const { i18n } = useTranslation();
-  const [language, setLanguage] = useState('en');
+  const [language, setLanguage] = useState(i18n.language || 'en');
 
   useEffect(() => {
-    // Initialize language from localStorage or i18n
-    const savedLanguage = localStorage.getItem('language') || i18n.language || 'en';
-    setLanguage(savedLanguage);
-    i18n.changeLanguage(savedLanguage);
+    const savedLanguage = localStorage.getItem('language');
+    if (savedLanguage && savedLanguage !== i18n.language) {
+      i18n.changeLanguage(savedLanguage);
+      setLanguage(savedLanguage);
+    }
   }, [i18n]);
 
   const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-    setLanguage(lng);
-    localStorage.setItem('language', lng); // Store language in localStorage
+    i18n.changeLanguage(lng).then(() => {
+      setLanguage(lng);
+      localStorage.setItem('language', lng);
+    });
   };
 
   return (
     <Box
       as="header"
-      bgColor="rgba(59, 47, 47)" // 
-      color="#F5DEB3" 
+      bgColor="rgba(59, 47, 47)"
+      color="#F5DEB3"
       px={6}
       py={4}
       position="sticky"
       top={0}
       zIndex={10}
       boxShadow="0 4px 6px rgba(0, 0, 0, 0.3)"
-      borderBottom="4px double #D2B48C" 
-      fontFamily="'Cinzel', serif" 
-      backgroundSize="cover, 40px, 40px" 
+      borderBottom="4px double #D2B48C"
+      fontFamily="'Cinzel', serif"
+      backgroundSize="cover, 40px, 40px"
       backgroundRepeat="repeat, no-repeat, no-repeat"
       backgroundBlendMode="overlay"
     >
@@ -46,7 +48,7 @@ function Header() {
               objectFit: 'contain',
               transition: 'transform 0.3s ease-in-out, filter 0.3s ease-in-out',
               cursor: 'pointer',
-              filter: 'drop-shadow(0 0 5px rgba(210, 180, 140, 0.7))', // Tan glow
+              filter: 'drop-shadow(0 0 5px rgba(210, 180, 140, 0.7))',
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'scale(1.1)';
@@ -62,9 +64,8 @@ function Header() {
             fontSize="xl"
             fontWeight="bold"
             color="#F5DEB3"
-            textShadow="2px 2px 4px rgba(0, 0, 0, 0.4), 0 0 10px rgba(255, 215, 0, 0.3)" // Subtle golden glow
+            textShadow="2px 2px 4px rgba(0, 0, 0, 0.4), 0 0 10px rgba(255, 215, 0, 0.3)"
             transition="transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out"
-
           >
             GraalOnline Ol'west
           </Text>
@@ -75,9 +76,9 @@ function Header() {
             onChange={(e) => changeLanguage(e.target.value)}
             value={language}
             width="120px"
-            bg="#3C2F2F" // Dark wood-like background
-            color="#F5DEB3" 
-            borderColor="#D2B48C" 
+            bg="#3C2F2F"
+            color="#F5DEB3"
+            borderColor="#D2B48C"
             borderRadius="md"
             fontFamily="'Cinzel', serif"
             sx={{
@@ -86,8 +87,8 @@ function Header() {
                 opacity: 0.9,
               },
             }}
-            _hover={{ borderColor: '#FFD700', bg: '#4A3728' }} // Gold hover effect
-            _focus={{ borderColor: '#FFD700', boxShadow: '0 0 0 2px #FFD700' }} // Gold focus
+            _hover={{ borderColor: '#FFD700', bg: '#4A3728' }}
+            _focus={{ borderColor: '#FFD700', boxShadow: '0 0 0 2px #FFD700' }}
           >
             <option value="en">English</option>
             <option value="es">Español</option>
