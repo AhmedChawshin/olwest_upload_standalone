@@ -9,11 +9,11 @@ function CustomCheckbox({ name, isChecked, onChange, children, ...props }) {
       colorScheme="brand"
       color="gray.200"
       borderColor="gray.500"
-      iconColor="white"
+      iconColor="#D2B48C"
       _checked={{
         borderColor: '#7f9cf5',
         '& .chakra-checkbox__control': {
-          boxShadow: '0 0 0 2px rgba(127, 156, 245, 0.6)',
+          boxShadow: '0 0 0 2px #D2B48C',
         },
       }}
       {...props}

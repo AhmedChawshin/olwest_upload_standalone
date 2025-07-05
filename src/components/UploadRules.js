@@ -67,7 +67,7 @@ function UploadRules() {
       mt={6}
     >
       <HStack spacing={2} mb={4}>
-        <Icon as={InfoIcon} color="#7f9cf5" />
+        <Icon as={InfoIcon} color="#D2B48C" />
         <Text fontSize="lg" fontWeight="bold" color="white">
           {t('upload.rulesTitle')}
         </Text>
