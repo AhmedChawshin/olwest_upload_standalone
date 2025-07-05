@@ -143,7 +143,7 @@ function App() {
         mb={6}
         transition="text-shadow 0.3s ease-in-out"
       >
-        GraalOnline Ol'West Upload {t('upload.email')}
+        GraalOnline Ol'West Upload - {t('upload.submitOlwest')}
       </Heading>
       <Box mt={8}>
         <OlwestForm
