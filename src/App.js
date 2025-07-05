@@ -1,15 +1,12 @@
 import { useState, useRef } from 'react';
-import { Box, Heading } from '@chakra-ui/react';
+import { Box, Heading, useToast } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 import OlwestForm from './components/OlwestForm';
 import Layout from './components/Layout';
 import './App.css';
-import { useToast } from '@chakra-ui/react';
-
 
 function App() {
-  const toast = useToast();
-
-  
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     email: '',
     file: null,
@@ -19,20 +16,20 @@ function App() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const fileInputRef = useRef(null);
+  const toast = useToast();
 
   const uploadPrices = {
     head: '20 000 Gralats',
     body: '10 000 Gralats',
-
   };
 
- const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.file) {
       toast({
-        title: "Upload Failed",
-        description: "Please select a file to upload.",
-        status: "error",
+        title: t('upload.errorTitle'),
+        description: t('upload.noFile'),
+        status: 'error',
         duration: 5000,
         isClosable: true,
       });
@@ -49,7 +46,7 @@ function App() {
     data.append('submit', 'Upload');
 
     try {
-      const response = await fetch('https://olwestupload.graalonline.com/upload.gs', {
+      const response = await fetch('/upload.gs', {
         method: 'POST',
         body: data,
       });
@@ -80,7 +77,7 @@ function App() {
       const isSuccess = message.toLowerCase().includes('thanks for submitting the file!');
 
       toast({
-        title: isSuccess ? 'Upload Successful' : 'Upload Failed',
+        title: isSuccess ? t('upload.successTitle') : t('upload.errorTitle'),
         description: message,
         status: isSuccess ? 'success' : 'error',
         duration: 5000,
@@ -101,8 +98,8 @@ function App() {
       }
     } catch (error) {
       toast({
-        title: 'Upload Failed',
-        description: error.message || 'An error occurred during submission.',
+        title: t('upload.errorTitle'),
+        description: error.message || t('upload.errorTitle'),
         status: 'error',
         duration: 5000,
         isClosable: true,
@@ -146,7 +143,6 @@ function App() {
           >
             GraalOnline Ol'West Upload
           </Heading>
-
           <Box mt={8}>
             <OlwestForm
               formData={formData}
