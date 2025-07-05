@@ -10,8 +10,8 @@ function OlwestForm({ formData, setFormData, handleSubmit, isSubmitting, uploadP
   const uploadTypes = [
     { value: 'head', label: t('upload.head'), icon: '/upload/head.png' },
     { value: 'body', label: t('upload.body'), icon: '/upload/body.png' },
-    { value: 'guild_logo', label: t('upload.logo'), icon: '/upload/guildlogo.png' },
-
+    { value: 'shield', label: t('upload.shield'), icon: '/upload/shield.png' },
+    { value: 'guild_logo', label: t('upload.logo'), icon: '/upload/guildlogo.png' }
   ];
 
   const handleInputChange = (e) => {
@@ -90,13 +90,13 @@ function OlwestForm({ formData, setFormData, handleSubmit, isSubmitting, uploadP
           border="2px solid"
           borderColor={formData.type === type.value ? '#D2B48C' : '#D2B48C'} 
           _hover={{
-            bg: '#4A3728', // Lighter brown on hover
-            borderColor: '#FFD700', // Golden border on hover
+            bg: '#4A3728', 
+            borderColor: '#FFD700', 
             transform: 'translateY(-2px)',
-            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 215, 0, 0.5)', // Tan and golden glow
+            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 215, 0, 0.5)',
           }}
           transition="all 0.3s ease"
-          leftIcon={<Image src={type.icon} boxSize="24px" filter="drop-shadow(0 0 3px rgba(210, 180, 140, 0.7))" />} // Tan glow on icon
+          leftIcon={<Image src={type.icon} boxSize="24px" filter="drop-shadow(0 0 3px rgba(210, 180, 140, 0.7))" draggable="false" />}
           height="70px"
           width={{ base: '100%', md: 'auto' }}
         >
@@ -109,7 +109,7 @@ function OlwestForm({ formData, setFormData, handleSubmit, isSubmitting, uploadP
             </Text>
             <Text
               fontSize="xs"
-              color="#D2B48C" // Tan for secondary text
+              color="#D2B48C" 
             >
               {uploadPrices[type.value] || 'Upload'}
             </Text>
@@ -119,7 +119,7 @@ function OlwestForm({ formData, setFormData, handleSubmit, isSubmitting, uploadP
         </HStack>
       </FormControl>
 
-        {Upload !== "guild_logo" &&(
+        {Upload !== "guild_logo" || Upload !== "shield"  &&(
           <FormControl>
             <CustomCheckbox name="transed" isChecked={formData.transed} onChange={handleInputChange}>
               {t('upload.setTransparency')}

@@ -22,6 +22,7 @@ function App() {
   const uploadPrices = {
     head: '20 000 Gralats',
     body: '10 000 Gralats',
+    shield: '2 500 Gralats',
     guild_logo: 'Free',
   };
 
