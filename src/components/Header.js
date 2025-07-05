@@ -22,18 +22,17 @@ function Header() {
   return (
     <Box
       as="header"
-      bgColor="rgba(59, 47, 47, 0.9)" // Saddle brown for a rustic look
-      color="#F5DEB3" // Wheat color for text
+      bgColor="rgba(59, 47, 47)" // 
+      color="#F5DEB3" 
       px={6}
       py={4}
       position="sticky"
       top={0}
       zIndex={10}
       boxShadow="0 4px 6px rgba(0, 0, 0, 0.3)"
-      borderBottom="4px double #D2B48C" // Rope-like double border in tan
-      fontFamily="'Cinzel', serif" // Western-style font
-
-      backgroundSize="cover, 40px, 40px" // Sand covers all, cactus and tumbleweed are small
+      borderBottom="4px double #D2B48C" 
+      fontFamily="'Cinzel', serif" 
+      backgroundSize="cover, 40px, 40px" 
       backgroundRepeat="repeat, no-repeat, no-repeat"
       backgroundBlendMode="overlay"
     >
@@ -51,7 +50,7 @@ function Header() {
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'scale(1.1)';
-              e.currentTarget.style.filter = 'drop-shadow(0 0 10px rgba(255, 215, 0, 0.8))'; // Golden glow on hover
+              e.currentTarget.style.filter = 'drop-shadow(0 0 10px rgba(255, 215, 0, 0.8))';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'scale(1)';
