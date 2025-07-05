@@ -49,7 +49,7 @@ function App() {
     data.append('submit', 'Upload');
 
     try {
-      const response = await fetch('/upload.gs', {
+      const response = await fetch('https://olwestupload.graalonline.com/upload.gs', {
         method: 'POST',
         body: data,
       });
@@ -61,16 +61,13 @@ function App() {
       const responseText = await response.text();
       let message = '';
 
-      // Check if response is Base64-encoded
       try {
         const decodedText = atob(responseText);
-        // If decoding succeeds, parse the decoded HTML
         const tempDiv = document.createElement('div');
         tempDiv.innerHTML = decodedText;
         const messageElement = tempDiv.querySelector('center') || tempDiv;
         message = messageElement.textContent.trim() || 'Message not found';
       } catch (e) {
-        // If not Base64, parse the response as HTML
         const tempDiv = document.createElement('div');
         tempDiv.innerHTML = responseText;
         const messageElement = tempDiv.querySelector('center') || tempDiv;
