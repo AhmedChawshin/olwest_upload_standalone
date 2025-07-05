@@ -119,7 +119,7 @@ function OlwestForm({ formData, setFormData, handleSubmit, isSubmitting, uploadP
         </HStack>
       </FormControl>
 
-        {!["guild_logo", "shield"].includes(Upload) &&(
+        {!["guild_logo"].includes(Upload) &&(
           <FormControl>
             <CustomCheckbox name="transed" isChecked={formData.transed} onChange={handleInputChange}>
               {t('upload.setTransparency')}
