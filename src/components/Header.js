@@ -80,15 +80,8 @@ function Header() {
             borderColor="#D2B48C" 
             borderRadius="md"
             fontFamily="'Cinzel', serif"
-            backgroundImage="url('https://www.transparenttextures.com/patterns/sand.png')" // Subtle desert sand texture
-            backgroundBlendMode="overlay"
-            backgroundSize="cover"
             sx={{
-              // Apply desert theme to dropdown options
               '& option': {
-                background: '#3C2F2F url(https://www.transparenttextures.com/patterns/sand.png)',
-                backgroundBlendMode: 'overlay',
-                backgroundSize: 'cover',
                 color: '#F5DEB3',
                 opacity: 0.9,
               },
