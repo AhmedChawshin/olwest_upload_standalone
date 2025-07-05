@@ -129,11 +129,11 @@ function App() {
  <Box
       maxW="1000px"
       w="full"
-      bg="rgba(59, 47, 47, 0.9)" // Dark wood-like background with slight transparency
+      bg="rgba(59, 47, 47, 0.9)" 
       p={8}
       borderRadius="md"
       boxShadow="0 4px 12px rgba(0, 0, 0, 0.4)"
-      border="4px double #D2B48C" // Rope-like double border in tan
+      border="4px double #D2B48C" 
 
       backgroundBlendMode="overlay"
     >
@@ -141,7 +141,7 @@ function App() {
         as="h1"
         size="xl"
         textAlign="center"
-        color="#F5DEB3" // Wheat color for text
+        color="#F5DEB3" 
         mb={6}
         transition="text-shadow 0.3s ease-in-out"
       >

@@ -10,9 +10,10 @@ const theme = extendTheme({
   },
   colors: {
     brand: {
-      400: '#7f9cf5',
-      500: '#667eea',
-      600: '#764ba2',
+      400: '#D2B48C', 
+      500: '#4A3728', 
+      600: '#3B2F2F', 
+      700: '#FFD700', 
     },
     slate: {
       800: '#1e293b',
@@ -20,10 +21,11 @@ const theme = extendTheme({
     },
   },
   fonts: {
-    heading: `'Poppins', sans-serif`,
+  heading: `'Poppins', sans-serif`,
     body: `'Poppins', sans-serif`,
   },
 });
+
 
 function Layout({ children }) {
   return (
