@@ -45,7 +45,7 @@ function App() {
     data.append('email', formData.email);
     data.append('file', formData.file);
     data.append('type', formData.type);
-    if(formData.type !== "guild_logo") {
+    if(!["guild_logo", "shield"].includes(formData.type)) {
     data.append('transed', formData.transed ? 'on' : 'off');
     }
     data.append('submit', 'Upload');
