@@ -60,7 +60,7 @@ function UploadRules() {
       {isMobile ? (
         <Accordion allowToggle>
           <AccordionItem border="none">
-            <AccordionButton _expanded={{ bg: 'gray.700' }} px={0}>
+            <AccordionButton px={0}>
               <Box as="span" flex="1" textAlign="left" color="#D2B48C" fontSize="sm">
                 {t('upload.viewRules')}
               </Box>
