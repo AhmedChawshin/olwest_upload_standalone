@@ -91,6 +91,7 @@ function Header() {
             _focus={{ borderColor: '#FFD700', boxShadow: '0 0 0 2px #FFD700' }}
           >
             <option value="en">English</option>
+            <option value="pt">Português</option>
             <option value="es">Español</option>
             <option value="fr">Français</option>
           </Select>

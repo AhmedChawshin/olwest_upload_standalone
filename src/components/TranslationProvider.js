@@ -4,6 +4,7 @@ import { initReactI18next } from 'react-i18next';
 import en from '../locales/en.json';
 import es from '../locales/es.json';
 import fr from '../locales/fr.json';
+import pt from '../locales/pt.json';
 
 const isClient = typeof window !== 'undefined';
 const lng = isClient ? localStorage.getItem('language') || 'en' : 'en';
@@ -18,6 +19,7 @@ if (!i18next.isInitialized) {
         en: { translation: en },
         es: { translation: es },
         fr: { translation: fr },
+        pt: { translation: pt },
       },
     })
     .catch((error) => {
