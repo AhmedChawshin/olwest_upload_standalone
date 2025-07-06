@@ -11,9 +11,10 @@ function UploadRules() {
             <Text fontSize="sm" color="gray.300" mb={4}>
               {t('upload.rulesIntro')}
               <Link
-                href="https://docs.google.com/document/d/1wqa3O6gsO_zY_BK04ETiiRkbOmHR-0dBm_ZHiSm54i8/edit"
+                href="https://docs.google.com/document/d/1May3jjOOMm8_5q7WeZF_qtkKgqR_WrrtOuxq_OUWH0I/edit?usp=sharing"
                 isExternal
-                color="#7f9cf5"
+                color="#D2B48C"
+                _hover={{ color: '#FFD700', filter: 'drop-shadow(0 0 5px #FFD700)' }}
               >
                 {t('upload.rulesLink')}
               </Link>

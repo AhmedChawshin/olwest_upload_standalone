@@ -55,7 +55,6 @@ function Footer() {
           zIndex={1}
         />
       ))}
-
       {/* ☁️ Clouds */}
       <Image
         src="/footer/cloud.png"
@@ -97,12 +96,57 @@ function Footer() {
         zIndex={1}
       />
 
-      {/* 🌵 Cacti and 🐫 Camel */}
+      {/* Animated Sand Layer */}
+      <Box
+        position="absolute"
+        bottom="0"
+        left="0"
+        width="100%"
+        height="15px"
+        bg="repeating-linear-gradient(
+          -45deg,
+          #DEB887,
+          #DEB887 8px,
+          #D2B48C 8px,
+          #D2B48C 16px,
+          #CDBA96 16px,
+          #CDBA96 24px
+        )"
+        opacity={0.7}
+        filter="url(#noiseFilter)"
+        zIndex={1}
+      />
+      <svg width="0" height="0">
+        <filter id="noiseFilter">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.25"
+            numOctaves="2"
+            stitchTiles="stitch"
+          />
+          <feColorMatrix type="saturate" values="0.2" />
+          <feBlend mode="soft-light" in2="SourceGraphic" />
+        </filter>
+      </svg>
+      {/* Tumbleweed */}
+      <Box
+        position="absolute"
+        bottom="3px"
+        right="-60px"
+        width="30px"
+        height="50px"
+        backgroundImage="url(/footer/tumbleweed.png)"
+        backgroundSize="contain"
+        backgroundRepeat="no-repeat"
+        animation="tumbleRoll 20s linear infinite"
+        zIndex={2}
+      />
+      {/*  Cactus and Camel */}
       <Image
         src="/footer/cactus1.png"
         alt="Pixel Cactus 1"
         position="absolute"
-        bottom="-3px"
+        bottom="0px"
         left="10px"
         width={["35px", "45px", "55px"]}
         imageRendering="pixelated"
@@ -115,14 +159,14 @@ function Footer() {
         src="/footer/cactus2.png"
         alt="Pixel Cactus 2"
         position="absolute"
-        bottom="-3px"
+        bottom="0px"
         left="70px"
         width={["30px", "40px", "50px"]}
         imageRendering="pixelated"
         opacity={0.8}
         pointerEvents="none"
         userSelect="none"
-        zIndex={2}
+        zIndex={1}
       />
       <Image
         src="/footer/camel.png"
@@ -215,26 +259,6 @@ function Footer() {
           {t('footer.copyright', { year })}
         </Text>
       </VStack>
-
-      {/* Animations */}
-      <style>
-        {`
-          @keyframes moonPulse {
-            0%, 100% { box-shadow: 0 0 20px 8px rgba(255, 255, 255, 0.2); }
-            50% { box-shadow: 0 0 25px 12px rgba(255, 255, 255, 0.3); }
-          }
-
-          @keyframes cloudMove {
-            0% { transform: translateX(-150px); }
-            100% { transform: translateX(110vw); }
-          }
-
-          @keyframes twinkle {
-            0% { opacity: 0.1; transform: scale(1); }
-            100% { opacity: 1; transform: scale(1.3); }
-          }
-        `}
-      </style>
     </Box>
   );
 }

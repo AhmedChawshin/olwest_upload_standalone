@@ -23,7 +23,7 @@ function App() {
     head: '20 000 Gralats',
     body: '10 000 Gralats',
     shield: '2 500 Gralats',
-    guild_logo: 'Free',
+    ganglogo: 'Free',
   };
 
   const handleSubmit = async (e) => {
