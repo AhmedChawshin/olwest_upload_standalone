@@ -24,6 +24,13 @@ const theme = extendTheme({
   heading: `'Poppins', sans-serif`,
     body: `'Poppins', sans-serif`,
   },
+  styles: {
+    global: {
+      body: {
+        bg: '#41392e',
+      },
+    },
+  }
 });
 
 
