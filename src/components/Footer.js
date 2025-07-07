@@ -57,7 +57,7 @@ function Footer() {
       ))}
       {/* ☁️ Clouds */}
       <Image
-        src="/footer/cloud.png"
+        src="footer/cloud.png"
         alt="Cloud"
         position="absolute"
         top="20px"
@@ -70,7 +70,7 @@ function Footer() {
         zIndex={1}
       />
       <Image
-        src="/footer/cloud.png"
+        src="footer/cloud.png"
         alt="Cloud"
         position="absolute"
         top="60px"
@@ -83,7 +83,7 @@ function Footer() {
         zIndex={1}
       />
       <Image
-        src="/footer/cloud.png"
+        src="footer/cloud.png"
         alt="Cloud"
         position="absolute"
         top="35px"
@@ -135,7 +135,7 @@ function Footer() {
         right="-60px"
         width="30px"
         height="50px"
-        backgroundImage="url(/footer/tumbleweed.png)"
+        backgroundImage="url(footer/tumbleweed.png)"
         backgroundSize="contain"
         backgroundRepeat="no-repeat"
         animation="tumbleRoll 20s linear infinite"
@@ -143,7 +143,7 @@ function Footer() {
       />
       {/*  Cactus and Camel */}
       <Image
-        src="/footer/cactus1.png"
+        src="footer/cactus1.png"
         alt="Pixel Cactus 1"
         position="absolute"
         bottom="0px"
@@ -156,7 +156,7 @@ function Footer() {
         zIndex={2}
       />
       <Image
-        src="/footer/cactus2.png"
+        src="footer/cactus2.png"
         alt="Pixel Cactus 2"
         position="absolute"
         bottom="0px"
@@ -169,7 +169,7 @@ function Footer() {
         zIndex={1}
       />
       <Image
-        src="/footer/camel.png"
+        src="footer/camel.png"
         alt="Pixel Camel"
         position="absolute"
         bottom="0"

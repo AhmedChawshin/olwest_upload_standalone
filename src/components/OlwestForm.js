@@ -8,10 +8,10 @@ function OlwestForm({ formData, setFormData, handleSubmit, isSubmitting, uploadP
   const { t } = useTranslation();
   const [Upload, setUpload] = useState("head");
   const uploadTypes = [
-    { value: 'head', label: t('upload.head'), icon: '/upload/head.png' },
-    { value: 'body', label: t('upload.body'), icon: '/upload/body.png' },
-    // { value: 'shield', label: t('upload.shield'), icon: '/upload/shield.png' },
-    { value: 'ganglogo', label: t('upload.logo'), icon: '/upload/guildlogo.png' },
+    { value: 'head', label: t('upload.head'), icon: 'upload/head.png' },
+    { value: 'body', label: t('upload.body'), icon: 'upload/body.png' },
+    // { value: 'shield', label: t('upload.shield'), icon: 'upload/shield.png' },
+    { value: 'ganglogo', label: t('upload.logo'), icon: 'upload/guildlogo.png' },
   ];
 
   const handleInputChange = (e) => {

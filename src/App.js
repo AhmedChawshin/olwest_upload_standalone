@@ -115,7 +115,7 @@ function App() {
     <Layout>
       <Box
         minH="100vh"
-        bgImage="url('/bg.webp')"
+        bgImage="url('bg.webp')"
         bgRepeat="repeat"
         bgSize="auto"
         color="white"
