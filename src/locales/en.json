@@ -12,7 +12,7 @@
         "upload.transparencyHelp": "This sets the transparent color as the same color in the top left corner of the image",
         "upload.agreeRules": "Do you agree with the upload rules?",
         "upload.viewRules": "View Upload Rules",
-        "upload.submitOlwest": "Upload",
+        "upload.submit": "Upload",
         "upload.rulesTitle": "Upload Rules",
         "upload.rulesIntro": "If you’d like to know more about our upload rules, we thoroughly explain them ",
         "upload.rulesLink": "in this form",
