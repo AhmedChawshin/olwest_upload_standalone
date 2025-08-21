@@ -38,7 +38,7 @@ function Header() {
       <Flex align="center" justify="space-between" maxW="1200px" mx="auto">
         <Flex align="center" gap={3}>
           <Image
-            src="logo192.png"
+            src="delteriaLogo.webp"
             width={55}
             alt="Graal Online"
             style={{

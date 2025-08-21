@@ -16,18 +16,17 @@ function Footer() {
   const year = new Date().getFullYear();
 
   return (
-<Box
-  as="footer"
-  position="relative"
-  overflow="hidden"
-  bg="#000000"
-  color="#d3c4a3"
-  py={14}
-  px={6}
-  boxShadow="0 -6px 10px rgba(0, 0, 0, 0.8)" // shadow above
->
-
-      {/* ✨ Stars (optional — can remove for deep cave) */}
+    <Box
+      as="footer"
+      position="relative"
+      overflow="hidden"
+      bg="#000000"
+      color="#d3c4a3"
+      py={14}
+      px={6}
+      boxShadow="0 -6px 10px rgba(0, 0, 0, 0.8)"
+    >
+      {/* Stars  */}
       {[...Array(15)].map((_, i) => (
         <Box
           key={i}
@@ -42,7 +41,19 @@ function Footer() {
           zIndex={1}
         />
       ))}
-
+      {/* Shooting Star*/}
+      <Box
+        position="absolute"
+        top="50px"        // start near top
+        right="-150px"    // offscreen right
+        width="3px"
+        height="3px"
+        bg="white"
+        borderRadius="full"
+        boxShadow="0 0 8px white"
+        animation="shootDiag 4s linear infinite"
+        zIndex={2}
+      />
       <VStack spacing={6} zIndex={3} position="relative">
         <HStack spacing={8} justify="center">
           <ChakraLink href="https://twitter.com/GraalOnline" isExternal>

@@ -23,20 +23,20 @@ function OlwestForm({ formData, setFormData, handleSubmit, isSubmitting, uploadP
   const { t } = useTranslation();
 
   const races = [
-    { value: 'human', label: 'Human', img: 'https://delteriaupload.graalonline.com/images/delt_human.png' },
-    { value: 'elf', label: 'Elf', img: 'https://delteriaupload.graalonline.com/images/delt_elf.png' },
-    { value: 'faerie', label: 'Faerie', img: 'https://delteriaupload.graalonline.com/images/delt_faerie.png' },
-    { value: 'dragonkin', label: 'Dragonkin', img: 'https://delteriaupload.graalonline.com/images/delt_dragonkin.png' },
+    { value: 'human', label: 'Human', img: 'upload/delt_human.webp' },
+    { value: 'elf', label: 'Elf', img: 'upload/delt_elf.webp' },
+    { value: 'faerie', label: 'Faerie', img: 'upload/delt_faerie.webp' },
+    { value: 'dragonkin', label: 'Dragonkin', img: 'upload/delt_dragonkin.webp' },
   ];
 
   const [Upload, setUpload] = useState(formData.type || 'head');
   const [race, setRace] = useState(formData.race || races[0].value);
 
   const uploadTypes = [
-    { value: 'head', label: t('upload.head'), icon: 'upload/head.png' },
-    { value: 'body', label: t('upload.body'), icon: 'upload/body.png' },
-    // { value: 'shield', label: t('upload.shield'), icon: 'upload/shield.png' },
-    { value: 'ganglogo', label: t('upload.logo'), icon: 'upload/guildlogo.png' },
+    { value: 'head', label: t('upload.head'), icon: 'upload/head.webp' },
+    { value: 'body', label: t('upload.body'), icon: 'upload/body.webp' },
+    // { value: 'shield', label: t('upload.shield'), icon: 'upload/shield.webp' },
+    { value: 'ganglogo', label: t('upload.logo'), icon: 'upload/guildlogo.webp' },
   ];
 
   const handleInputChange = (e) => {
